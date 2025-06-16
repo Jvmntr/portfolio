@@ -8,6 +8,24 @@
 > Portfólio feito com React, Typescript e styled-components <br><br>
 > Acesse aqui -> Em andamento
 
+## ⚙️ Checklist de desenvolvimento
+
+Atualização de desenvolvimento do projeto
+
+### ✔️ Concluído ->
+
+- [ X ] Desenvolvimento da Nav e Hero section.
+- [ X ] Implementação do light/dark mode.
+- [ X ] Desenvolvimento da seção sobre mim.
+
+### 🛠 Próximos passos ->
+
+- [ ] Desenvolvimento das seções de experiência profissional e acadêmica.
+
+
+
+> Previsão de término -> 20/06/2025
+
 ## ✒️ Feito por:
 
 <img align="left" height="94px" width="94px" alt="Foto de perfil" src="./src/assets/images/profile.jpg">
