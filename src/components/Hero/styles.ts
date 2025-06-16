@@ -1,19 +1,13 @@
 import styled from "styled-components";
 
-const accentGreen = "#2ecc71";
-const darkBackground = "#282c34";
-const lightText = "#a0a8b3";
-const whiteText = "#ffffff";
-const invertedText = "#282c34";
-
 export const HeroContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   min-height: calc(100vh - 5rem);
-  background-color: ${darkBackground};
-  color: ${whiteText};
+  background-color: var(--background-primary);
+  color: var(--text-primary);
   text-align: center;
   padding: 4rem 2rem;
   box-sizing: border-box;
@@ -46,7 +40,7 @@ export const HeroTitle = styled.h1`
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.2;
-  color: ${whiteText};
+  color: var(--text-primary);
   margin: 0;
 
   @media (max-width: 1024px) {
@@ -70,7 +64,7 @@ export const HeroSubtitle = styled.p`
   font-family: "Fira Code", monospace;
   font-size: 1.3rem;
   font-weight: 400;
-  color: ${lightText};
+  color: var(--text-secondary);
   margin: 0;
   max-width: 700px;
   line-height: 1.6;
@@ -129,26 +123,26 @@ const BaseHeroButton = styled.a`
 `;
 
 export const HeroButton = styled(BaseHeroButton)`
-  background-color: ${accentGreen};
-  color: ${invertedText};
-  border: 2px solid ${accentGreen};
+  background-color: var(--accent-color);
+  color: var(--text-inverted);
+  border: 2px solid var(--accent-color);
 
   &:hover {
     filter: brightness(1.1);
-    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+    box-shadow: 0 6px 20px var(--accent-shadow);
     transform: translateY(-2px);
   }
 `;
 
 export const HeroButtonOutline = styled(BaseHeroButton)`
   background-color: transparent;
-  color: ${accentGreen};
-  border: 2px solid ${accentGreen};
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
 
   &:hover {
-    background-color: ${accentGreen};
-    color: ${invertedText};
-    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+    background-color: var(--accent-color);
+    color: var(--text-inverted);
+    box-shadow: 0 6px 20px var(--accent-shadow);
     transform: translateY(-2px);
   }
 `;

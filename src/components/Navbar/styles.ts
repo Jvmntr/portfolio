@@ -1,41 +1,35 @@
 import styled, { keyframes } from "styled-components";
 
-const accentGreen = "#2ecc71";
-const darkBackground = "#282c34";
-const lightText = "#a0a8b3";
-const whiteText = "#ffffff";
-const invertedText = "#282c34";
-
 const textGlitch = keyframes`
   0% {
-    text-shadow: 0 0 ${accentGreen}, 0 0 ${accentGreen};
+    text-shadow: 0 0 var(--accent-color), 0 0 var(--accent-color);
     transform: translateX(0);
   }
   20% {
-    text-shadow: 1px 0 ${accentGreen}, -1px 0 ${accentGreen};
+    text-shadow: 1px 0 var(--accent-color), -1px 0 var(--accent-color);
     transform: translateX(-1px);
   }
   40% {
-    text-shadow: -1px 0 ${accentGreen}, 1px 0 ${accentGreen};
+    text-shadow: -1px 0 var(--accent-color), 1px 0 var(--accent-color);
     transform: translateX(1px);
   }
   60% {
-    text-shadow: 2px 0 ${accentGreen}, -2px 0 ${accentGreen};
+    text-shadow: 2px 0 var(--accent-color), -2px 0 var(--accent-color);
     transform: translateX(-2px);
   }
   80% {
-    text-shadow: -2px 0 ${accentGreen}, 2px 0 ${accentGreen};
+    text-shadow: -2px 0 var(--accent-color), 2px 0 var(--accent-color);
     transform: translateX(2px);
   }
   100% {
-    text-shadow: 0 0 ${accentGreen}, 0 0 ${accentGreen};
+    text-shadow: 0 0 var(--accent-color), 0 0 var(--accent-color);
     transform: translateX(0);
   }
 `;
 
 const textColorShift = keyframes`
-  0%, 100% { color: ${accentGreen}; }
-  50% { color: ${whiteText}; }
+  0%, 100% { color: var(--accent-color); }
+  50% { color: var(#F2F0EF); }
 `;
 
 export const NavbarContainer = styled.nav`
@@ -45,9 +39,9 @@ export const NavbarContainer = styled.nav`
   align-items: center;
   top: 0;
   height: 5rem;
-  background-color: ${darkBackground};
+  background-color: var(--background-primary);
   padding: 0 2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px var(--box-shadow-dark);
   position: sticky;
   z-index: 1000;
 
@@ -64,7 +58,7 @@ export const NavName = styled.h1`
   font-family: "Fira Code", monospace;
   font-size: 1.6rem;
   font-weight: 600;
-  color: ${accentGreen};
+  color: var(--accent-color);
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 
@@ -82,7 +76,7 @@ export const NavLinksWrapper = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 2.5rem;
-  list-style: none; 
+  list-style: none;
   margin: 0;
   padding: 0;
 
@@ -91,21 +85,20 @@ export const NavLinksWrapper = styled.ul`
   }
 `;
 
-export const NavLinks = styled.a` 
-  color: ${lightText};
+export const NavLinks = styled.a`
+  color: var(--text-secondary);
   font-family: "Fira Code", monospace;
   font-size: 1.1rem;
   font-weight: 500;
   position: relative;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
-  text-decoration: none; 
-  padding: 0.5rem 0; 
-  display: inline-block; 
-
+  text-decoration: none;
+  padding: 0.5rem 0;
+  display: inline-block;
 
   &:hover {
-    color: ${whiteText};
+    color: var(--text-primary);
   }
 
   &::before {
@@ -116,7 +109,7 @@ export const NavLinks = styled.a`
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: ${accentGreen};
+    background-color: var(--accent-color);
     border-radius: 4px;
     opacity: 0;
     transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -135,7 +128,7 @@ export const NavButtonContainer = styled.button`
   justify-content: center;
   height: 3rem;
   width: 150px;
-  border: 2px solid ${accentGreen};
+  border: 2px solid var(--accent-color);
   border-radius: 8px;
   background-color: transparent;
   cursor: pointer;
@@ -143,8 +136,8 @@ export const NavButtonContainer = styled.button`
   position: relative;
 
   &:hover {
-    background-color: ${accentGreen};
-    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 15px var(--accent-shadow);
   }
 
   @media (max-width: 768px) {
@@ -156,20 +149,21 @@ export const NavButtonText = styled.span`
   font-family: "Fira Code", monospace;
   font-size: 1rem;
   font-weight: 600;
-  color: ${accentGreen};
+  color: var(--accent-color);
   transition: color 0.3s ease-in-out;
   display: flex;
   align-items: center;
   gap: 8px;
 
   ${NavButtonContainer}:hover & {
-    color: ${invertedText};
+    color: var(--text-inverted);
   }
 `;
 
 export const DownloadIcon = styled.img`
   width: 18px;
   height: 18px;
+  /* Filters adjust color. You might need to tweak these for light mode if they don't look right. */
   filter: invert(50%) sepia(85%) saturate(1469%) hue-rotate(94deg) brightness(97%) contrast(89%);
 
   ${NavButtonContainer}:hover & {
@@ -182,10 +176,10 @@ export const LanguageDropdown = styled.div<{ isOpen: boolean }>`
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: ${darkBackground};
-  border: 1px solid ${accentGreen};
+  background-color: var(--background-primary);
+  border: 1px solid var(--accent-color);
   border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px var(--box-shadow-medium);
   padding: 0.5rem 0;
   min-width: 120px;
   display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
@@ -200,7 +194,7 @@ export const LanguageDropdown = styled.div<{ isOpen: boolean }>`
 export const LanguageOption = styled.a`
   font-family: "Fira Code", monospace;
   font-size: 0.95rem;
-  color: ${lightText};
+  color: var(--text-secondary);
   padding: 0.8rem 1rem;
   text-decoration: none;
   cursor: pointer;
@@ -208,8 +202,8 @@ export const LanguageOption = styled.a`
   text-align: center;
 
   &:hover {
-    background-color: ${accentGreen};
-    color: ${invertedText};
+    background-color: var(--accent-color);
+    color: var(--text-inverted);
   }
 `;
 
@@ -230,7 +224,7 @@ export const MobileIcon = styled.div<{ isOpen: boolean }>`
       position: absolute;
       width: 100%;
       height: 3px;
-      background-color: ${whiteText};
+      background-color: var(--text-primary);
       border-radius: 2px;
       transition: all 0.3s ease-in-out;
 
@@ -260,8 +254,8 @@ export const MobileMenu = styled.div<{ isOpen: boolean }>`
   top: 5rem;
   left: 0;
   width: 100%;
-  background-color: ${darkBackground};
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  background-color: var(--background-primary);
+  box-shadow: 0 8px 16px var(--box-shadow-medium);
   padding: 1rem 0;
   transition: all 0.3s ease-in-out;
   transform: ${({ isOpen }) => (isOpen ? "translateY(0)" : "translateY(-100%)")};
@@ -275,7 +269,7 @@ export const MobileMenu = styled.div<{ isOpen: boolean }>`
 `;
 
 export const MobileLink = styled.a`
-  color: ${whiteText};
+  color: var(--text-primary);
   font-family: "Fira Code", monospace;
   font-size: 1.2rem;
   font-weight: 500;
@@ -285,7 +279,7 @@ export const MobileLink = styled.a`
   transition: background-color 0.2s ease-in-out;
 
   &:hover {
-    background-color: ${darkBackground};
+    background-color: var(--background-secondary);
   }
 `;
 
@@ -296,15 +290,15 @@ export const MobileButtonContainer = styled.button`
   height: 3rem;
   width: calc(100% - 4rem);
   margin: 1rem 2rem;
-  border: 2px solid ${accentGreen};
+  border: 2px solid var(--accent-color);
   border-radius: 8px;
   background-color: transparent;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    background-color: ${accentGreen};
-    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 15px var(--accent-shadow);
   }
 `;
 
@@ -312,10 +306,10 @@ export const MobileButtonText = styled.span`
   font-family: "Fira Code", monospace;
   font-size: 1rem;
   font-weight: 600;
-  color: ${accentGreen};
+  color: var(--accent-color);
   transition: color 0.3s ease-in-out;
 
   ${MobileButtonContainer}:hover & {
-    color: ${invertedText};
+    color: var(--text-inverted);
   }
 `;

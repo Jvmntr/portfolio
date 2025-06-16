@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --background-primary: #282c34;
+  --background-secondary: #3a3f47;
+  --text-primary: #F2F0EF;
+  --text-secondary: #a0a8b3;
+  --text-inverted: #282c34;
+  --accent-color: #2ecc71;
+  --accent-shadow: rgba(46, 204, 113, 0.4);
+  --box-shadow-dark: rgba(0, 0, 0, 0.2);
+  --box-shadow-medium: rgba(0, 0, 0, 0.3);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body.light-mode {
+  --background-primary: #F2F0EF;
+  --background-secondary: #f0f2f5;
+  --text-primary: #282c34;
+  --text-secondary: #444b56;
+  --text-inverted: #F2F0EF;
+  --accent-color: #2ecc71;
+  --accent-shadow: rgba(46, 204, 113, 0.25);
+  --box-shadow-dark: rgba(0, 0, 0, 0.1);
+  --box-shadow-medium: rgba(0, 0, 0, 0.15);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', monospace;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
