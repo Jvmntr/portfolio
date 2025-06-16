@@ -1,6 +1,6 @@
 # 👨🏻‍💻 Card de informações pessoais
 
- ![GitHub repo size](https://img.shields.io/github/repo-size/jvmntr/personal-card?style=for-the-badge) 
+ ![GitHub repo size](https://img.shields.io/github/repo-size/jvmntr/portfolio?style=for-the-badge) 
  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
  <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
