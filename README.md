@@ -14,9 +14,9 @@ Atualização de desenvolvimento do projeto
 
 ### ✔️ Concluído ->
 
-- [ X ] Desenvolvimento da Nav e Hero section.
-- [ X ] Implementação do light/dark mode.
-- [ X ] Desenvolvimento da seção sobre mim.
+- [X] Desenvolvimento da Nav e Hero section.
+- [X] Implementação do light/dark mode.
+- [X] Desenvolvimento da seção sobre mim.
 
 ### 🛠 Próximos passos ->
 
@@ -28,7 +28,7 @@ Atualização de desenvolvimento do projeto
 
 ## ✒️ Feito por:
 
-<img align="left" height="94px" width="94px" alt="Foto de perfil" src="./src/assets/images/profile.jpg">
+<img align="left" height="94px" width="94px" alt="Foto de perfil" src="./src/assets/images/profile_git.jpg">
 
 **Feito com 🖤 por João 'Jvmntr' Monteiro** \
 [**Desenvolvedor fullstack**]  <br><br>
