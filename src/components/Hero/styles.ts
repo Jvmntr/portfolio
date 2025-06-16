@@ -6,8 +6,8 @@ export const HeroContainer = styled.section`
   align-items: center;
   width: 100%;
   min-height: calc(100vh - 5rem);
-  background-color: var(--background-primary);
-  color: var(--text-primary);
+  background-color: var(--background-primary); 
+  color: var(--text-primary); 
   text-align: center;
   padding: 4rem 2rem;
   box-sizing: border-box;
@@ -40,7 +40,7 @@ export const HeroTitle = styled.h1`
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--text-primary);
+  color: var(--text-primary); 
   margin: 0;
 
   @media (max-width: 1024px) {
@@ -64,7 +64,7 @@ export const HeroSubtitle = styled.p`
   font-family: "Fira Code", monospace;
   font-size: 1.3rem;
   font-weight: 400;
-  color: var(--text-secondary);
+  color: var(--text-secondary); 
   margin: 0;
   max-width: 700px;
   line-height: 1.6;
@@ -123,26 +123,26 @@ const BaseHeroButton = styled.a`
 `;
 
 export const HeroButton = styled(BaseHeroButton)`
-  background-color: var(--accent-color);
-  color: var(--text-inverted);
-  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color); 
+  color: var(--text-inverted); 
+  border: 2px solid var(--accent-color); 
 
   &:hover {
     filter: brightness(1.1);
-    box-shadow: 0 6px 20px var(--accent-shadow);
+    box-shadow: 0 6px 20px var(--accent-shadow); 
     transform: translateY(-2px);
   }
 `;
 
 export const HeroButtonOutline = styled(BaseHeroButton)`
   background-color: transparent;
-  color: var(--accent-color);
-  border: 2px solid var(--accent-color);
+  color: var(--accent-color); 
+  border: 2px solid var(--accent-color); 
 
   &:hover {
-    background-color: var(--accent-color);
-    color: var(--text-inverted);
-    box-shadow: 0 6px 20px var(--accent-shadow);
+    background-color: var(--accent-color); 
+    color: var(--text-inverted); 
+    box-shadow: 0 6px 20px var(--accent-shadow); 
     transform: translateY(-2px);
   }
 `;

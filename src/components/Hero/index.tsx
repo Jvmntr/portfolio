@@ -8,15 +8,14 @@ import {
   HeroButton,
   HeroButtonOutline,
 } from "./styles";
+import Typing from '../Typing/index';
 
 const Hero = () => {
   return (
     <HeroContainer id="hero">
       <HeroContent>
-        <HeroTitle>Olá, eu sou Jvmntr</HeroTitle>
-        <HeroSubtitle>
-          Desenvolvedor Front-end apaixonado por criar experiências web incríveis.
-        </HeroSubtitle>
+        <HeroTitle>Olá, eu sou o Jvmntr</HeroTitle>
+        <HeroSubtitle as={Typing} text="Desenvolvedor Front-end apaixonado por criar experiências web incríveis." typingSpeed={60} startDelay={500} />
         <HeroButtons>
           <HeroButton href="#projetos">Meus Projetos</HeroButton>
           <HeroButtonOutline href="#contato">Entre em Contato</HeroButtonOutline>

@@ -163,7 +163,6 @@ export const NavButtonText = styled.span`
 export const DownloadIcon = styled.img`
   width: 18px;
   height: 18px;
-  /* Filters adjust color. You might need to tweak these for light mode if they don't look right. */
   filter: invert(50%) sepia(85%) saturate(1469%) hue-rotate(94deg) brightness(97%) contrast(89%);
 
   ${NavButtonContainer}:hover & {
