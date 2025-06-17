@@ -34,6 +34,31 @@ body.light-mode {
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 5rem;
+  
+  scrollbar-width: thin; 
+  scrollbar-color: var(--accent-color) transparent; 
+}
+
+::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px; 
+  background-color: transparent; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color); 
+  border-radius: 10px; 
+  border: 2px solid var(--background-primary); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-secondary); 
 }
 
 body {

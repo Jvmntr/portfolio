@@ -29,7 +29,7 @@ const textGlitch = keyframes`
 
 const textColorShift = keyframes`
   0%, 100% { color: var(--accent-color); }
-  50% { color: var(#F2F0EF); }
+  50% { color: var(--text-primary); }
 `;
 
 export const NavbarContainer = styled.nav`
@@ -86,39 +86,47 @@ export const NavLinksWrapper = styled.ul`
 `;
 
 export const NavLinks = styled.a`
-  color: var(--text-secondary);
   font-family: "Fira Code", monospace;
   font-size: 1.1rem;
   font-weight: 500;
   position: relative;
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
   text-decoration: none;
-  padding: 0.5rem 0;
-  display: inline-block;
+  padding: 0.5rem 0; 
+  display: inline-block; 
+  overflow: hidden; 
 
-  &:hover {
+  span {
+    display: block; 
+    color: var(--text-secondary); 
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; 
+    width: 0; 
+    height: 2px; 
+    background-color: var(--accent-color); 
+    transform: translateX(-50%); 
+    transition: width 0.3s ease-in-out;
+    z-index: 0; 
+  }
+
+  &:hover span {
     color: var(--text-primary);
+    transform: translateY(-2px); 
+  }
+
+  &:hover::after {
+    width: 100%; 
   }
 
   &::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 100%;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--accent-color);
-    border-radius: 4px;
-    opacity: 0;
-    transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    z-index: -1;
-  }
-
-  &:hover::before {
-    width: calc(100% + 16px);
-    opacity: 0.1;
+    content: none;
   }
 `;
 
