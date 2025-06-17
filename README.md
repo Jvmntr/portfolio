@@ -6,7 +6,7 @@
  <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
 
 > Portfólio feito com React, Typescript e styled-components <br><br>
-> Acesse aqui -> Em andamento
+> Acesse aqui -> Aguarde a publicação.
 
 ## ⚙️ Checklist de desenvolvimento
 
@@ -22,6 +22,7 @@ Atualização de desenvolvimento do projeto
 ### 🛠 Próximos passos ->
 
 - [ ] Implementação da lógica de download do curriculo.
+- [ ] Implementar indicativo de swipe mobile.
 - [ ] Desenvolvimento da seção de projetos.
 - [ ] Desenvolvimento da seção de habilidades.
 - [ ] Desenvolvimento da seção de Contatos e Footer.

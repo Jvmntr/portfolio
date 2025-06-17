@@ -53,7 +53,9 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      <NavName>Jvmntr</NavName>
+      <NavName href="#hero">
+        Jvmntr
+      </NavName>
 
       <NavLinksWrapper>
         {navItems.map((item) => (

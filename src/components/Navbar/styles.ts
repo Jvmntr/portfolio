@@ -54,7 +54,7 @@ export const NavbarContainer = styled.nav`
   }
 `;
 
-export const NavName = styled.h1`
+export const NavName = styled.a`
   font-family: "Fira Code", monospace;
   font-size: 1.6rem;
   font-weight: 600;
