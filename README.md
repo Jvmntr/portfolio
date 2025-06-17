@@ -17,18 +17,21 @@ Atualização de desenvolvimento do projeto
 - [X] Desenvolvimento da Nav e Hero section.
 - [X] Implementação do light/dark mode.
 - [X] Desenvolvimento da seção sobre mim.
+- [X] Desenvolvimento das seções de experiência profissional e acadêmica.
 
 ### 🛠 Próximos passos ->
 
-- [ ] Desenvolvimento das seções de experiência profissional e acadêmica.
+- [ ] Implementação da lógica de download do curriculo.
+- [ ] Desenvolvimento da seção de projetos.
+- [ ] Desenvolvimento da seção de habilidades.
+- [ ] Desenvolvimento da seção de Contatos e Footer.
+- [ ] Implementação de testes unitários com Jest.
 
-
-
-> Previsão de término -> 20/06/2025
+> Data prevista para publicação -> 20/06/2025
 
 ## ✒️ Feito por:
 
-<img align="left" height="94px" width="94px" alt="Foto de perfil" src="./src/assets/images/profile_git.jpg">
+<img align="left" height="94px" width="94px" alt="Foto de perfil" src="./src/assets/images/profile.jpg">
 
 **Feito com 🖤 por João 'Jvmntr' Monteiro** \
 [**Desenvolvedor fullstack**]  <br><br>

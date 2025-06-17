@@ -1,13 +1,13 @@
 import React from 'react';
 import {
   AboutContainer,
-  AboutCard,              // O novo "cartão" central
-  AboutImageWrapper,      // Container para a imagem/ilustração
-  AboutImage,             // A imagem em si
-  AboutTextContent,       // O novo container para texto e sociais
+  AboutCard,              
+  AboutImageWrapper,      
+  AboutImage,             
+  AboutTextContent,       
   AboutTitle,
-  AboutName,              // Para o seu nome
-  AboutRole,              // Para o seu cargo/função
+  AboutName,              
+  AboutRole,              
   AboutText,
   AboutStack,
   SocialLinksContainer,
@@ -17,15 +17,11 @@ import {
 import aboutIllustration from '../../assets/images/profile.jpg'; 
 import githubIcon from '../../assets/icons/github.svg';
 import linkedinIcon from '../../assets/icons/linkedin.svg';
-import instagramIcon from '../../assets/icons/instagram.svg';
-import discordIcon from '../../assets/icons/discord.svg';
 
 const About = () => {
   const socialLinks = [
     { name: 'GitHub', url: 'https://github.com/Jvmntr', iconSrc: githubIcon },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/jvmntr/', iconSrc: linkedinIcon },
-    { name: 'Discord', url: 'https://www.linkedin.com/in/jvmntr/', iconSrc: discordIcon },
-    { name: 'Instagram', url: 'https://www.linkedin.com/in/jvmntr/', iconSrc: instagramIcon },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/jvmntr/', iconSrc: linkedinIcon }
   ];
 
   return (
@@ -48,7 +44,7 @@ const About = () => {
           <AboutRole>Fullstack Developer</AboutRole> 
 
            <AboutText>
-            Sou um desenvolvedor Front-end dedicado a criar interfaces de usuário intuitivas e de alta performance. Minha paixão reside em transformar designs complexos em experiências digitais fluidas e impactantes, sempre com foco no usuário.
+            Desenvolvedor fullstack com 3 anos de experiência, criando soluções web completas com foco em performance e boas práticas. Atuo do front ao back, unindo design funcional e código eficiente.  
           </AboutText>
           <AboutStack>
             ReactJS • NodeJs • Typescript

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import ExperienceSection from './components/ExperienceSection';
 
 function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
@@ -21,8 +22,38 @@ function App() {
     setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
   };
 
+  const toggleModal = () => {
+    alert('Em breve você vai descobrir quem está por trás do "Jvmntr" :)')
+  }
+
   return (
     <>
+      <button
+        onClick={toggleModal}
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          left: '20px',
+          zIndex: 1001,
+          padding: '8px',
+          width: '40px',
+          height: '40px',
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: theme === 'dark' ? '#f0f0f0' : '#333',
+          border: 'none',
+          cursor: 'pointer',
+          fontSize: '20px',
+          boxShadow: '0px 2px 5px rgba(0,0,0,0.2)',
+          transition: 'background-color 0.3s ease, color 0.3s ease, transform 0.2s ease',
+        }}
+        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
+        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+      >
+        😶‍🌫️
+      </button>
       <button
         onClick={toggleTheme}
         style={{
@@ -54,6 +85,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <ExperienceSection />
     </>
   );
 }

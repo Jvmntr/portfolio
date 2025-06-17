@@ -163,10 +163,10 @@ export const NavButtonText = styled.span`
 export const DownloadIcon = styled.img`
   width: 18px;
   height: 18px;
-  filter: invert(50%) sepia(85%) saturate(1469%) hue-rotate(94deg) brightness(97%) contrast(89%);
+  filter: invert(56%) sepia(89%) saturate(4134%) hue-rotate(326deg) brightness(91%) contrast(90%);
 
   ${NavButtonContainer}:hover & {
-    filter: invert(10%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(0%);
+    filter: invert(0%) sepia(5%) saturate(7500%) hue-rotate(279deg) brightness(105%) contrast(106%);
   }
 `;
 

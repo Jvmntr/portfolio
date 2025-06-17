@@ -5,6 +5,7 @@ export const AboutContainer = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-height: calc(100vh - 5rem);
   padding: 5rem 2rem;
   background-color: var(--background-primary);
   color: var(--text-primary);

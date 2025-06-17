@@ -15,7 +15,7 @@ const Hero = () => {
     <HeroContainer id="hero">
       <HeroContent>
         <HeroTitle>Olá, eu sou o Jvmntr</HeroTitle>
-        <HeroSubtitle as={Typing} text="Desenvolvedor Front-end apaixonado por criar experiências web incríveis." typingSpeed={60} startDelay={500} />
+        <HeroSubtitle as={Typing} text="Desenvolvedor Web Fullstack apaixonado em criar experiências incríveis!" typingSpeed={60} startDelay={500} />
         <HeroButtons>
           <HeroButton href="#projetos">Meus Projetos</HeroButton>
           <HeroButtonOutline href="#contato">Entre em Contato</HeroButtonOutline>

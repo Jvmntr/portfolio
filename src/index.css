@@ -6,11 +6,12 @@
   --text-primary: #F2F0EF;
   --text-secondary: #a0a8b3;
   --text-inverted: #282c34;
-  --accent-color: #2ecc71;
-  --accent-shadow: rgba(46, 204, 113, 0.4);
+  --accent-color: #DE3163;
+  --accent-shadow: rgba(204, 46, 93, 0.25);
   --box-shadow-dark: rgba(0, 0, 0, 0.2);
   --box-shadow-medium: rgba(0, 0, 0, 0.3);
-}
+  --icon-filter: invert(56%) sepia(89%) saturate(4134%) hue-rotate(326deg) brightness(91%) contrast(90%);
+  }
 
 body.light-mode {
   --background-primary: #F2F0EF;
@@ -18,8 +19,8 @@ body.light-mode {
   --text-primary: #282c34;
   --text-secondary: #444b56;
   --text-inverted: #F2F0EF;
-  --accent-color: #2ecc71;
-  --accent-shadow: rgba(46, 204, 113, 0.25);
+  --accent-color: #DE3163;
+  --accent-shadow: rgba(204, 46, 93, 0.25);
   --box-shadow-dark: rgba(0, 0, 0, 0.1);
   --box-shadow-medium: rgba(0, 0, 0, 0.15);
 }
