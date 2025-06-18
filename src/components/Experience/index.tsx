@@ -34,7 +34,7 @@ const ExperienceItemComponent: React.FC<ExperienceItemProps> = ({ item, classNam
         </div>
         <ItemLocation>{item.location}</ItemLocation>
       </ItemHeader>
-      {item.summary && <ItemSummary>{item.summary}</ItemSummary>} {/* Renderiza o resumo se ele existir */}
+      {item.summary && <ItemSummary>{item.summary}</ItemSummary>} 
       <ItemDescriptionList>
         {item.description.map((desc, index) => (
           <ItemDescription key={index}>{desc}</ItemDescription>

@@ -87,7 +87,7 @@ function App() {
       <Hero />
       <About />
       <ExperienceSection />
-      <Projects />
+      <Projects theme={theme}/>
     </>
   );
 }

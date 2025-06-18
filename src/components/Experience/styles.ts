@@ -85,13 +85,12 @@ export const ItemLocation = styled.p`
   }
 `;
 
-// NOVO COMPONENTE: ItemSummary
 export const ItemSummary = styled.p`
   font-family: "Fira Code", monospace;
   font-size: 0.95rem;
   line-height: 1.5;
   color: var(--text-secondary);
-  margin: 0.5rem 0 1rem 0; /* Margem abaixo do resumo e acima da lista de descrições */
+  margin: 0.5rem 0 1rem 0; 
 
   @media (max-width: 480px) {
     font-size: 0.9rem;
@@ -101,7 +100,7 @@ export const ItemSummary = styled.p`
 export const ItemDescriptionList = styled.ul`
   list-style: none;
   padding: 0;
-  margin: 0.5rem 0 1rem 0; /* Margem abaixo da lista de descrições */
+  margin: 0.5rem 0 1rem 0; 
 `;
 
 export const ItemDescription = styled.li`

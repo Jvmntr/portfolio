@@ -2,6 +2,7 @@ export interface ProjectItem {
   title: string;
   description: string;
   imageUrl: string;
+  imageUrlLight?: string;
   technologies: string[];
   githubLink: string;
   demoLink?: string;
@@ -13,6 +14,7 @@ export const projectsData: ProjectItem[] = [
     description:
       'Um portfolio moderno e responsivo para exibir meus projetos e habilidades. Construído do zero com foco em performance e design limpo.',
     imageUrl: 'portfolio.png',
+    imageUrlLight: "portfolio-light.png",
     technologies: ['React', 'TypeScript', 'Styled-Components'],
     githubLink: 'https://github.com/jvmntr/portfolio'
     

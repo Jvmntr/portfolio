@@ -95,7 +95,7 @@ export const TechnologiesContainer = styled.div`
   margin-bottom: 1.5rem;
 `;
 
-export const ProjectTechnology = styled.span`
+export const ProjectTechs = styled.span`
   font-family: "Fira Code", monospace;
   font-size: 0.85rem;
   font-weight: 500;

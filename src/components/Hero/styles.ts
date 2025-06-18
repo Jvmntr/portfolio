@@ -69,10 +69,10 @@ export const HeroTitle = styled.h1`
 
   .foreground-title {
     position: relative;
+    color: var(--text-primary);
     font-family: 'akira', monospace;
     font-size: 2.5rem;
     font-weight: 900;
-    color: white;
     z-index: 1;
     white-space: nowrap;
   }

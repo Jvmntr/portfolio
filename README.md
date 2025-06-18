@@ -18,12 +18,12 @@ Atualização de desenvolvimento do projeto
 - [X] Implementação do light/dark mode.
 - [X] Desenvolvimento da seção sobre mim.
 - [X] Desenvolvimento das seções de experiência profissional e acadêmica.
+- [X] Desenvolvimento da seção de projetos.
 
 ### 🛠 Próximos passos ->
 
 - [ ] Implementação da lógica de download do curriculo.
 - [ ] Implementar indicativo de swipe mobile.
-- [ ] Desenvolvimento da seção de projetos.
 - [ ] Desenvolvimento da seção de habilidades.
 - [ ] Desenvolvimento da seção de Contatos e Footer.
 - [ ] Implementação de testes unitários com Jest.

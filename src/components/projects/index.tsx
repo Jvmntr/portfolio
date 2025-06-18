@@ -9,27 +9,38 @@ import {
   ProjectImage,
   CardContent,
   ProjectTitle, 
+  ProjectTechs,
   ProjectDescription,
   TechnologiesContainer,
-  ProjectTechnology, 
   ButtonsContainer,
   ProjectButton,
 } from './styles';
 
-const Projects: React.FC = () => {
+interface ProjectsProps {
+  theme: 'dark' | 'light';
+}
+
+const Projects: React.FC<ProjectsProps> = ({ theme }) => { 
   return (
     <ProjectsContainer id="projetos">
       <SectionTitle>Meus Projetos</SectionTitle>
       <ProjectsGrid>
         {projectsData.map((project: ProjectItem, index: number) => ( 
           <ProjectCard key={index}>
-            <ProjectImage src={require(`../../assets/images/projects/${project.imageUrl}`)} alt={`Imagem do projeto ${project.title}`} />
+            <ProjectImage
+              src={
+                project.title === 'Portfolio Pessoal' && theme === 'light' && project.imageUrlLight
+                  ? require(`../../assets/images/projects/${project.imageUrlLight}`)
+                  : require(`../../assets/images/projects/${project.imageUrl}`)
+              }
+              alt={`Imagem do projeto ${project.title}`}
+            />
             <CardContent>
               <ProjectTitle>{project.title}</ProjectTitle> 
               <ProjectDescription>{project.description}</ProjectDescription>
               <TechnologiesContainer>
                 {project.technologies.map((tech: string) => ( 
-                  <ProjectTechnology key={tech}>{tech}</ProjectTechnology> 
+                  <ProjectTechs key={tech}>{tech}</ProjectTechs> 
                 ))}
               </TechnologiesContainer>
               <ButtonsContainer>
