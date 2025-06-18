@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import ExperienceSection from './components/ExperienceSection';
+import Projects from './components/projects';
 
 function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
@@ -86,6 +87,7 @@ function App() {
       <Hero />
       <About />
       <ExperienceSection />
+      <Projects />
     </>
   );
 }

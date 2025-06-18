@@ -1,4 +1,4 @@
-# 👨🏻‍💻 Card de informações pessoais
+# 👨🏻‍💻 Portfólio
 
  ![GitHub repo size](https://img.shields.io/github/repo-size/jvmntr/portfolio?style=for-the-badge) 
  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
