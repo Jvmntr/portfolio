@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import ExperienceSection from './components/ExperienceSection';
 import Projects from './components/projects';
+import Skills from './components/Skills';
 
 function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
@@ -88,6 +89,7 @@ function App() {
       <About />
       <ExperienceSection />
       <Projects theme={theme}/>
+      <Skills />
     </>
   );
 }

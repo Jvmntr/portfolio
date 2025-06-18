@@ -78,7 +78,7 @@ export const CarouselControls = styled.div`
   gap: 1.5rem;
   margin-top: 1rem;
 
-  @media (max-width: 768px) { /* <-- HIDE CONTROLS ON MOBILE/TABLET */
+  @media (max-width: 768px) { 
     display: none;
   }
 `;
