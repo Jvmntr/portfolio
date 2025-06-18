@@ -14,7 +14,7 @@ const Footer = () => {
                 @ {currentYear} Jvmntr. Todos os direitos reservados.
             </CopyrightText>
             <DevMessage>
-                Feito com 🖤 por Jvmntr
+                Feito com 🖤 por João <span className="nickname">'Jvmntr'</span> Monteiro
             </DevMessage>
         </FooterContainer>
     );

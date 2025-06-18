@@ -20,12 +20,12 @@ Atualização de desenvolvimento do projeto
 - [X] Desenvolvimento das seções de experiência profissional e acadêmica.
 - [X] Desenvolvimento da seção de projetos.
 - [X] Desenvolvimento da seção de habilidades.
+- [X] Desenvolvimento da seção do Footer.
 
 ### 🛠 Próximos passos ->
 
 - [ ] Implementação da lógica de download do curriculo.
 - [ ] Implementar indicativo de swipe mobile.
-- [ ] Desenvolvimento da seção do Footer.
 - [ ] Implementação de testes unitários com Jest.
 
 > Data prevista para publicação -> 20/06/2025

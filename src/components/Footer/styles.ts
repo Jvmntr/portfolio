@@ -29,4 +29,9 @@ export const DevMessage = styled.p`
     margin: 0;
     text-align: center;
     color: var(--text-secondary);
+
+    .nickname {
+        color: #c72e68; 
+    }
+
 `;
