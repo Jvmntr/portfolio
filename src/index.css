@@ -1,8 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
+@font-face {
+       font-family: 'breathing';
+       src: url('./fonts/Breathing.ttf') format('truetype'); 
+       font-weight: normal; 
+       font-style: normal; 
+     }
+
+@font-face {
+       font-family: 'akira';
+       src: url('./fonts/Akira.otf') format('truetype'); 
+       font-weight: normal; 
+       font-style: normal; 
+     }
+     
+
 :root {
   --background-primary: #282c34;
-  --background-secondary: #3a3f47;
+  --background-secondary: #323846;
   --text-primary: #F2F0EF;
   --text-secondary: #a0a8b3;
   --text-inverted: #282c34;

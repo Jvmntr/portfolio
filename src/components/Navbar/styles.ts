@@ -172,9 +172,10 @@ export const DownloadIcon = styled.img`
   width: 18px;
   height: 18px;
   filter: invert(56%) sepia(89%) saturate(4134%) hue-rotate(326deg) brightness(91%) contrast(90%);
+  transition: color 1s ease-in-out;
 
   ${NavButtonContainer}:hover & {
-    filter: invert(0%) sepia(5%) saturate(7500%) hue-rotate(279deg) brightness(105%) contrast(106%);
+    filter: invert(18%) sepia(26%) saturate(469%) hue-rotate(184deg) brightness(96%) contrast(90%);
   }
 `;
 

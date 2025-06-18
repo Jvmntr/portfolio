@@ -16,12 +16,10 @@ export const HeroContainer = styled.section`
 
   @media (max-width: 768px) {
     padding: 3rem 1.5rem;
-    min-height: calc(100vh - 5rem);
   }
 
   @media (max-width: 480px) {
     padding: 2.5rem 1.25rem;
-    min-height: calc(100vh - 5rem);
   }
 `;
 
@@ -30,33 +28,73 @@ export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3.5rem;
   text-align: center;
   z-index: 1;
-`;
-
-export const HeroTitle = styled.h1`
-  font-family: "Fira Code", monospace;
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--text-primary); 
-  margin: 0;
-
-  @media (max-width: 1024px) {
-    font-size: 3rem;
-  }
 
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    gap: 2.5rem;
   }
 
   @media (max-width: 480px) {
-    font-size: 2rem;
+    gap: 2rem;
+  }
+`;
+
+export const HeroTitle = styled.h1`
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  padding: 2rem 0;
+
+  .desktop-title-wrapper {
+    display: inline-block;
+    position: relative;
   }
 
-  @media (max-width: 375px) {
-    font-size: 1.7rem;
+  .background-name {
+    position: absolute;
+    font-family: 'breathing', cursive;
+    font-size: 6rem;
+    color: #c72e68; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-12deg);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+  }
+
+  .foreground-title {
+    position: relative;
+    font-family: 'akira', monospace;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: white;
+    z-index: 1;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 0;
+    .background-name {
+      font-size: 4.5rem;
+    }
+    .foreground-title {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem 0;
+    .background-name {
+      font-size: 3.5rem;
+    }
+    .foreground-title {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -85,7 +123,6 @@ export const HeroSubtitle = styled.p`
 export const HeroButtons = styled.div`
   display: flex;
   gap: 1.5rem;
-  margin-top: 2rem;
 
   @media (max-width: 480px) {
     flex-direction: column;

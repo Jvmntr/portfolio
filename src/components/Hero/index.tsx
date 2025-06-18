@@ -14,7 +14,12 @@ const Hero = () => {
   return (
     <HeroContainer id="hero">
       <HeroContent>
-        <HeroTitle>Olá, eu sou o Jvmntr</HeroTitle>
+        <HeroTitle>
+          <span className="desktop-title-wrapper">
+            <span className="background-name">Jvmntr</span>
+            <span className="foreground-title">DESENVOLVEDOR FULLSTACK</span>
+          </span>
+        </HeroTitle>
         <HeroSubtitle as={Typing} text="Desenvolvedor Web Fullstack apaixonado em criar experiências incríveis!" typingSpeed={60} startDelay={500} />
         <HeroButtons>
           <HeroButton href="#projetos">Meus Projetos</HeroButton>
