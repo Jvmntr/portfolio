@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <FooterContainer>
             <CopyrightText>
-                @ {currentYear} Jvmntr. Todos os direitos reservados.
+                @{currentYear} Jvmntr. Todos os direitos reservados.
             </CopyrightText>
             <DevMessage>
                 Feito com 🖤 por João <span className="nickname">'Jvmntr'</span> Monteiro

@@ -31,7 +31,7 @@ export const DevMessage = styled.p`
     color: var(--text-secondary);
 
     .nickname {
-        color: #c72e68; 
+        color: var(--accent-color); 
     }
 
 `;

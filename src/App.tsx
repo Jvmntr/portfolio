@@ -6,6 +6,7 @@ import ExperienceSection from './components/ExperienceSection';
 import Projects from './components/projects';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
@@ -91,7 +92,9 @@ function App() {
       <ExperienceSection />
       <Projects theme={theme}/>
       <Skills />
+      <Contact />
       <Footer />
+     
     </>
   );
 }

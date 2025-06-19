@@ -30,7 +30,7 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <SkillsSection id="skills">
+    <SkillsSection id="habilidades">
       <SectionTitle>Habilidades</SectionTitle>
       <SkillsContainer>
         {skillsData.map((category: ICategory) => (
