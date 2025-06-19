@@ -34,9 +34,23 @@ const Navbar = () => {
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
   const handleDownloadCV = (lang: 'pt-br' | 'en') => {
-    alert(`Baixando CV em ${lang.toUpperCase()}...`);
-    setIsDropdownOpen(false);
-  };
+  const fileName = lang === 'pt-br' 
+  ? 'resume/resume_pt-br.pdf' 
+  : 'resume/resume_en.pdf';     
+  
+  const filePath = `/${fileName}`; 
+
+  const link = document.createElement('a');
+  link.href = filePath;
+  link.download = fileName; 
+
+  document.body.appendChild(link);
+  link.click();
+
+  document.body.removeChild(link);
+
+  setIsDropdownOpen(false);
+};
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {

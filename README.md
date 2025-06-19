@@ -21,10 +21,10 @@ Atualização de desenvolvimento do projeto
 - [X] Desenvolvimento da seção de projetos.
 - [X] Desenvolvimento da seção de habilidades.
 - [X] Desenvolvimento da seção do Footer.
+- [X] Implementação da lógica de download do curriculo.
 
 ### 🛠 Próximos passos ->
 
-- [ ] Implementação da lógica de download do curriculo.
 - [ ] Implementar indicativo de swipe mobile.
 - [ ] Implementação de testes unitários com Jest.
 
