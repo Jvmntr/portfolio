@@ -35,8 +35,8 @@ const Navbar = () => {
 
   const handleDownloadCV = (lang: 'pt-br' | 'en') => {
   const fileName = lang === 'pt-br' 
-  ? '/portfolio/resume/resume_pt-br.pdf' 
-  : '/portfolio/resume/resume_en.pdf';     
+  ? 'portfolio/resume/resume_pt-br.pdf' 
+  : 'portfolio/resume/resume_en.pdf';     
   
   const filePath = `/${fileName}`; 
 
