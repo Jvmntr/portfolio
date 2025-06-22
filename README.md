@@ -5,7 +5,8 @@
  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
  <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
 
-> Portfólio feito com React, Typescript e styled-components <br><br>
+
+<img src="./src/assets/images/projects/portfolio.png" alt="Imagem do projeto">
 > Acesse aqui -> Aguarde a publicação.
 
 ## ⚙️ Checklist de desenvolvimento
