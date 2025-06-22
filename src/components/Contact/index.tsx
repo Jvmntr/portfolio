@@ -72,7 +72,7 @@ const Contact = () => {
           Estou aberto a novas oportunidades e colaborações. Preencha o formulário
           abaixo e vamos conversar!
         </Description>
-        <StyledForm ref={formRef} onSubmit={handleSubmit}>
+        <StyledForm ref={formRef} onSubmit={handleSubmit} data-testid="contact-form">
           <Label htmlFor="name">Nome</Label>
           <Input id="name" type="text" name="name" required />
           <ValidationError prefix="Name" field="name" errors={state.errors} />

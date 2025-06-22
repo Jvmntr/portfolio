@@ -89,17 +89,11 @@ export const AboutTextContent = styled.div`
 
 export const AboutTitle = styled.h2`
   font-family: "Fira Code", monospace;
-  font-size: 2.5rem;
+  font-size: 2.2rem; 
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--accent-color); 
   margin-top: 0;
-  margin-bottom: 0.5rem;
-
-  ${AboutTextContent} & {
-    font-size: 2.2rem;
-    color: var(--accent-color);
-    margin-bottom: 0;
-  }
+  margin-bottom: 0; 
 
   @media (max-width: 768px) {
     font-size: 2rem;

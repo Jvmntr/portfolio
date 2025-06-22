@@ -26,7 +26,7 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
       <SectionTitle>Meus Projetos</SectionTitle>
       <ProjectsGrid>
         {projectsData.map((project: ProjectItem, index: number) => ( 
-          <ProjectCard key={index}>
+          <ProjectCard key={index} data-testid={`project-card-${project.title}`}>
             <ProjectImage
               src={
                 project.title === 'Portfolio Pessoal' && theme === 'light' && project.imageUrlLight

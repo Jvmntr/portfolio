@@ -51,6 +51,7 @@ export const CategoryQuadrant = styled.div`
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease, border-color 0.3s ease;
+  border: 1px solid var(--accent-color);
   
   &:hover {
     transform: translateY(-8px);
@@ -74,7 +75,7 @@ export const IconsContainer = styled.div`
 `;
 
 interface SkillIconProps {
-  isSelected: boolean;
+  $isSelected: boolean;
 }
 
 export const SkillIcon = styled.img<SkillIconProps>`
@@ -116,8 +117,8 @@ export const SkillIcon = styled.img<SkillIconProps>`
     }
   }
 
-  ${({ isSelected }) =>
-    isSelected &&
+  ${({ $isSelected }) => 
+    $isSelected &&
     css`
       background-color: var(--background-secondary);
       transform: scale(1.15);

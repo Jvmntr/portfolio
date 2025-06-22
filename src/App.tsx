@@ -7,8 +7,16 @@ import Projects from './components/projects';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
+import PersonalModal from './components/PersonalModal';
+import { myPersonalData } from './data/personal';
+import { professionalExperiences, academicExperiences } from './data/experiences'; 
 
 function App() {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleOpenModal = () => setModalOpen(true);
+  const handleCloseModal = () => setModalOpen(false);
+
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     const savedTheme = localStorage.getItem('theme');
     return savedTheme === 'light' ? 'light' : 'dark';
@@ -26,14 +34,10 @@ function App() {
     setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
   };
 
-  const toggleModal = () => {
-    alert('Em breve você vai descobrir quem está por trás do "Jvmntr" :)')
-  }
-
   return (
     <>
       <button
-        onClick={toggleModal}
+        onClick={handleOpenModal}
         style={{
           position: 'fixed',
           bottom: '20px',
@@ -89,11 +93,20 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <ExperienceSection />
+      <ExperienceSection 
+        professionalExperiences={professionalExperiences}
+        academicExperiences={academicExperiences}
+      />
       <Projects theme={theme}/>
       <Skills />
       <Contact />
       <Footer />
+
+      <PersonalModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        data={myPersonalData}
+      />
      
     </>
   );

@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
-import ExperienceItem from '../Experience';
-import { professionalExperiences, academicExperiences } from '../../data/experiences';
+import ExperienceItemComponent from '../Experience'; 
+import { ExperienceItem } from '../../data/experiences';
 
 import {
   ExperienceContainer,
@@ -11,7 +11,12 @@ import {
   CarouselButton,
 } from './styles';
 
-const Experience = () => {
+interface ExperienceProps {
+  professionalExperiences: ExperienceItem[];
+  academicExperiences: ExperienceItem[];
+}
+
+const ExperienceSection: React.FC<ExperienceProps> = ({ professionalExperiences, academicExperiences }) => {
   const professionalCarouselRef = useRef<HTMLDivElement>(null);
   const academicCarouselRef = useRef<HTMLDivElement>(null);
 
@@ -20,7 +25,11 @@ const Experience = () => {
   const [isAcadPrevDisabled, setIsAcadPrevDisabled] = useState(true);
   const [isAcadNextDisabled, setIsAcadNextDisabled] = useState(false);
 
-  const updateCarouselButtonStates = (ref: React.RefObject<HTMLDivElement | null>, setPrev: React.Dispatch<React.SetStateAction<boolean>>, setNext: React.Dispatch<React.SetStateAction<boolean>>) => {
+  const updateCarouselButtonStates = (
+    ref: React.RefObject<HTMLDivElement | null>, 
+    setPrev: React.Dispatch<React.SetStateAction<boolean>>, 
+    setNext: React.Dispatch<React.SetStateAction<boolean>>
+  ) => {
     if (ref.current) {
       const { scrollLeft, scrollWidth, clientWidth } = ref.current;
       setPrev(scrollLeft <= 0);
@@ -57,7 +66,6 @@ const Experience = () => {
   const scrollCarousel = (ref: React.RefObject<HTMLDivElement | null>, direction: 'prev' | 'next') => {
     if (ref.current) {
       const scrollAmount = ref.current.clientWidth;
-
       if (direction === 'next') {
         ref.current.scrollLeft += scrollAmount;
       } else {
@@ -79,10 +87,10 @@ const Experience = () => {
         <SectionTitle>Experiência Profissional</SectionTitle>
         <ExperienceList ref={professionalCarouselRef}>
           {professionalExperiences.map((item, index) => (
-            <ExperienceItem key={index} item={item} className="experience-item-card" />
+            <ExperienceItemComponent key={index} item={item} className="experience-item-card" />
           ))}
         </ExperienceList>
-        <CarouselControls>
+        <CarouselControls aria-label="Controles do carrossel profissional">
           <CarouselButton onClick={() => scrollCarousel(professionalCarouselRef, 'prev')} disabled={isProfPrevDisabled}>
             &#8249;
           </CarouselButton>
@@ -94,10 +102,10 @@ const Experience = () => {
         <SectionTitle>Formação Acadêmica</SectionTitle>
         <ExperienceList ref={academicCarouselRef}>
           {academicExperiences.map((item, index) => (
-            <ExperienceItem key={index} item={item} className="experience-item-card" />
+            <ExperienceItemComponent key={index} item={item} className="experience-item-card" />
           ))}
         </ExperienceList>
-        <CarouselControls>
+        <CarouselControls aria-label="Controles do carrossel acadêmico">
           <CarouselButton onClick={() => scrollCarousel(academicCarouselRef, 'prev')} disabled={isAcadPrevDisabled}>
             &#8249;
           </CarouselButton>
@@ -110,4 +118,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default ExperienceSection;

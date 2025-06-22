@@ -40,7 +40,7 @@ export const Label = styled.label`
 export const Input = styled.input`
   padding: 0.8rem 1rem;
   border-radius: 8px;
-  border: 1px solid var(--text-secondary);
+  border: 1px solid var(--accent-color);
   background-color: var(--background-secondary);
   color: var(--text-primary);
   font-size: 1rem;
@@ -56,7 +56,7 @@ export const Input = styled.input`
 export const TextArea = styled.textarea`
   padding: 0.8rem 1rem;
   border-radius: 8px;
-  border: 1px solid var(--text-secondary);
+  border: 1px solid var(--accent-color);
   background-color: var(--background-secondary);
   color: var(--text-primary);
   font-size: 1rem;

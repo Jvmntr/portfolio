@@ -34,7 +34,7 @@ const Skills: React.FC = () => {
       <SectionTitle>Habilidades</SectionTitle>
       <SkillsContainer>
         {skillsData.map((category: ICategory) => (
-          <CategoryQuadrant key={category.title}>
+          <CategoryQuadrant key={category.title} data-testid={`quadrant-${category.title}`}>
             <div>
               <CategoryTitle>{category.title}</CategoryTitle>
               <IconsContainer>
@@ -43,9 +43,9 @@ const Skills: React.FC = () => {
                     key={skill.name}
                     src={require(`../../assets/icons/${skill.icon}`)}
                     alt={`${skill.name} icon`}
-                    isSelected={selectedSkills[category.title]?.name === skill.name}
+                    $isSelected={selectedSkills[category.title]?.name === skill.name} // Renomeado aqui
                     onClick={() => handleSkillSelect(category.title, skill)}
-                  />
+/>
                 ))}
               </IconsContainer>
             </div>

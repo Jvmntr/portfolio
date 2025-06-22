@@ -33,11 +33,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, type, message }) => {
 
   return (
     <ModalOverlay onClick={handleOverlayClick}>
-      <ModalContent $type={type}>
+      <ModalContent $type={type} role="dialog" aria-labelledby="modal-title" aria-describedby="modal-message">
         <CloseButton onClick={onClose}>&times;</CloseButton>
         <IconWrapper $type={type}>{icon}</IconWrapper>
-        <ModalTitle>{title}</ModalTitle>
-        <ModalMessage>{message}</ModalMessage>
+        <ModalTitle id="modal-title">{title}</ModalTitle>
+        <ModalMessage id="modal-message">{message}</ModalMessage>
       </ModalContent>
     </ModalOverlay>
   );

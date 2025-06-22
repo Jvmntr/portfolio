@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     FooterContainer,
     CopyrightText,
@@ -9,7 +8,7 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <FooterContainer>
+        <FooterContainer data-testid="footer-container">
             <CopyrightText>
                 @{currentYear} Jvmntr. Todos os direitos reservados.
             </CopyrightText>
