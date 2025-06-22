@@ -55,19 +55,29 @@ export const ModalContent = styled.div`
 `;
 
 export const CloseButton = styled.button`
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: transparent;
-  border: none;
-  color: var(--accent-color);
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+position: absolute;
+top: 16px; 
+right: 20px; 
+background: transparent;
+border: none;
+color: var(--accent-color);
+font-size: 4rem; 
+cursor: pointer;
+transition: transform 0.2s ease-in-out;
+padding: 0.2rem 0.5rem;
+display: flex; 
+align-items: center; 
+justify-content: center; 
+line-height: 1; 
 
-  &:hover {
-    transform: scale(1.2);
-  }
+&::before {
+content: '\u00D7';
+display: block;
+}
+
+&:hover {
+transform: scale(1.2);
+}
 `;
 
 export const SectionTitle = styled.h2`
