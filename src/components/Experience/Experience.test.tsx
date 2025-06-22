@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import 'jest-styled-components';
@@ -51,17 +50,15 @@ describe('Componente ExperienceItemComponent', () => {
   it('não deve renderizar o sumário e as tecnologias se não forem fornecidos', () => {
     render(<ExperienceItemComponent item={mockMinimalExperience} />);
 
-    const summary = screen.queryByText(/resumo detalhado/i);
-    expect(summary).not.toBeInTheDocument();
-
-    const technology = screen.queryByText('React');
-    expect(technology).not.toBeInTheDocument();
+    expect(screen.queryByText(/resumo detalhado/i)).not.toBeInTheDocument();
+    expect(screen.queryByText('React')).not.toBeInTheDocument();
   });
   
   it('deve aplicar a className fornecida ao container principal', () => {
-    const { container } = render(<ExperienceItemComponent item={mockMinimalExperience} className="minha-classe" />);
+    render(<ExperienceItemComponent item={mockMinimalExperience} className="minha-classe" />);
     
-    expect(container.firstChild).toHaveClass('minha-classe');
+    const container = screen.getByTestId('experience-item');
+    expect(container).toHaveClass('minha-classe');
   });
 
   describe('Testes de Estilo', () => {
@@ -79,19 +76,17 @@ describe('Componente ExperienceItemComponent', () => {
     });
 
     it('deve aplicar os estilos de hover no card', () => {
-      const { container } = render(<ExperienceItemComponent item={mockFullExperience} />);
-      const card = container.firstChild;
+      render(<ExperienceItemComponent item={mockFullExperience} />);
 
-      if (card) {
-        fireEvent.mouseEnter(card);
+      const card = screen.getByTestId('experience-item');
 
-        expect(card).toHaveStyleRule('transform', 'translateY(-5px)', {
-          modifier: ':hover',
-        });
-        expect(card).toHaveStyleRule('box-shadow', '0 8px 16px var(--box-shadow-medium)', {
-          modifier: ':hover',
-        });
-      }
+      fireEvent.mouseEnter(card);
+      expect(card).toHaveStyleRule('transform', 'translateY(-5px)', {
+        modifier: ':hover',
+      });
+      expect(card).toHaveStyleRule('box-shadow', '0 8px 16px var(--box-shadow-medium)', {
+        modifier: ':hover',
+      });
     });
   });
 });

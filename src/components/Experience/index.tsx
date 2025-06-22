@@ -23,7 +23,7 @@ interface ExperienceItemProps {
 
 const ExperienceItemComponent: React.FC<ExperienceItemProps> = ({ item, className }) => {
   return (
-    <ExperienceItemCard className={className}>
+    <ExperienceItemCard className={className} data-testid="experience-item">
       <ItemHeader>
         <div>
           <ItemTitle>{item.title}</ItemTitle>
