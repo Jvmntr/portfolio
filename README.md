@@ -1,39 +1,39 @@
-# 👨🏻‍💻 Portfólio
+ <h1 align="center">
+  👨🏻‍💻 <br> Portfólio - Jvmntr
+</h1>
 
+<div align="center"> 
+ 
  ![GitHub repo size](https://img.shields.io/github/repo-size/jvmntr/portfolio?style=for-the-badge) 
  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
  <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
-
+</div>
 
 <img src="./src/assets/images/projects/portfolio.png" alt="Imagem do projeto">
-> Acesse aqui -> Aguarde a publicação.
+<h4 align="center"><a href="https://www.iuricode.com/">Clique para visitar o projeto</a></h4>
 
-## ⚙️ Checklist de desenvolvimento
+## 📄 Seções
 
-Atualização de desenvolvimento do projeto
+Seções do portfólio:
 
-### ✔️ Concluído ->
+* **Home:** Apresentação breve e objetiva para introduzir o portfólio;
+* **Sobre mim:** Nessa seção trago um resumo pessoal sobre minha trajetória e interesses;
+* **Experiências Profissionais:** Destaco empresas onde atuei.;
+* **Experiências Acadêmicas** Seção dedicada as minhas formações acadêmicas.;
+* **Projetos:** Mostra alguns projetos desenvolvidos, com links diretos para os repositórios no GitHub;
+* **Habilidades:** Exibe em cards as tecnologias e áreas nas quais tenho domínio;
+* **Entre em contato:** Espaço dedicado para contato.;
 
-- [X] Desenvolvimento da Nav e Hero section.
-- [X] Implementação do light/dark mode.
-- [X] Desenvolvimento da seção sobre mim.
-- [X] Desenvolvimento das seções de experiência profissional e acadêmica.
-- [X] Desenvolvimento da seção de projetos.
-- [X] Desenvolvimento da seção de habilidades.
-- [X] Desenvolvimento da seção do Footer.
-- [X] Implementação da lógica de download do curriculo.
+## 💼 Tecnologias utilizadas
 
-### 🛠 Próximos passos ->
-
-- [ ] Implementar indicativo de swipe mobile.
-- [ ] Implementação de testes unitários com Jest.
-
-> Data prevista para publicação -> 20/06/2025
+- ReactJS;
+- Typescript;
+- Styled-components;
 
 ## ✒️ Feito por:
 
-<img align="left" height="94px" width="94px" alt="Foto de perfil" src="./src/assets/images/profile.jpg">
+<img align="left" height="94px" width="94px" alt="Foto de perfil" src="./src/assets/images/profile_git.jpg">
 
 **Feito com 🖤 por João 'Jvmntr' Monteiro** \
 [**Desenvolvedor fullstack**]  <br><br>
