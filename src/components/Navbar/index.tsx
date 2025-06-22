@@ -33,25 +33,6 @@ const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
-  const handleDownloadCV = (lang: 'pt-br' | 'en') => {
-  const fileName = lang === 'pt-br' 
-  ? 'portfolio/resume/resume_pt-br.pdf' 
-  : 'portfolio/resume/resume_en.pdf';     
-  
-  const filePath = `/${fileName}`; 
-
-  const link = document.createElement('a');
-  link.href = filePath;
-  link.download = fileName; 
-
-  document.body.appendChild(link);
-  link.click();
-
-  document.body.removeChild(link);
-
-  setIsDropdownOpen(false);
-};
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -63,7 +44,7 @@ const Navbar = () => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isDropdownOpen]);
+  }, []); 
 
   return (
     <NavbarContainer>
@@ -85,8 +66,20 @@ const Navbar = () => {
             Baixar CV <DownloadIcon src={Download} alt="Download Icon" />
           </NavButtonText>
           <LanguageDropdown isOpen={isDropdownOpen}>
-            <LanguageOption onClick={() => handleDownloadCV('pt-br')} href="#">PT-BR</LanguageOption>
-            <LanguageOption onClick={() => handleDownloadCV('en')} href="#">EN</LanguageOption>
+            <LanguageOption
+              href="/portfolio/resume/resume_pt-br.pdf"
+              download="resume_pt-br.pdf"
+              onClick={() => setIsDropdownOpen(false)}
+            >
+              PT-BR
+            </LanguageOption>
+            <LanguageOption
+              href="/portfolio/resume/resume_en.pdf"
+              download="resume_en.pdf"
+              onClick={() => setIsDropdownOpen(false)}
+            >
+              EN
+            </LanguageOption>
           </LanguageDropdown>
         </NavButtonContainer>
       </div>
@@ -108,8 +101,20 @@ const Navbar = () => {
             Baixar CV <DownloadIcon src={Download} alt="Download Icon" />
           </NavButtonText>
           <LanguageDropdown isOpen={isDropdownOpen}>
-            <LanguageOption onClick={() => handleDownloadCV('pt-br')} href="#">PT-BR</LanguageOption>
-            <LanguageOption onClick={() => handleDownloadCV('en')} href="#">EN</LanguageOption>
+            <LanguageOption
+              href="/portfolio/resume/resume_pt-br.pdf"
+              download="resume_pt-br.pdf"
+              onClick={() => setIsDropdownOpen(false)}
+            >
+              PT-BR
+            </LanguageOption>
+            <LanguageOption
+              href="/portfolio/resume/resume_en.pdf"
+              download="resume_en.pdf"
+              onClick={() => setIsDropdownOpen(false)}
+            >
+              EN
+            </LanguageOption>
           </LanguageDropdown>
         </MobileButtonContainer>
       </MobileMenu>
