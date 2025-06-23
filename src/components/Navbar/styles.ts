@@ -230,7 +230,7 @@ export const MobileIcon = styled.div<{ isOpen: boolean }>`
       display: block;
       position: absolute;
       width: 100%;
-      height: 3px;
+      height: 0.2rem;
       background-color: var(--text-primary);
       border-radius: 2px;
       transition: all 0.3s ease-in-out;
@@ -298,7 +298,6 @@ export const MobileDownloadLink = styled.a`
   padding: 1rem 0;
   text-align: center;
   width: 100%;
-  border-top: 1px solid var(--background-secondary);
   transition: background-color 0.2s ease-in-out;
 
   &:hover {
