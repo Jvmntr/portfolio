@@ -192,7 +192,7 @@ export const LanguageDropdown = styled.div<{ isOpen: boolean }>`
   min-width: 120px;
   display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
   flex-direction: column;
-  z-index: 1000;
+  z-index: 99;
   opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
   transform-origin: top center;
   transition: opacity 0.2s ease-out, transform 0.2s ease-out;

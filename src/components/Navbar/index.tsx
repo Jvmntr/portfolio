@@ -104,14 +104,20 @@ const Navbar = () => {
             <LanguageOption
               href="/portfolio/resume/resume_pt-br.pdf"
               download="resume_pt-br.pdf"
-              onClick={() => setIsDropdownOpen(false)}
+              onClick={(e) => {
+                e.stopPropagation(); 
+                setIsDropdownOpen(false);
+              }}
             >
               PT-BR
             </LanguageOption>
             <LanguageOption
               href="/portfolio/resume/resume_en.pdf"
               download="resume_en.pdf"
-              onClick={() => setIsDropdownOpen(false)}
+              onClick={(e) => {
+                e.stopPropagation(); 
+                setIsDropdownOpen(false);
+              }}
             >
               EN
             </LanguageOption>

@@ -1,4 +1,3 @@
-import React from "react";
 import {
   HeroContainer,
   HeroContent,
@@ -22,15 +21,6 @@ const Hero = () => {
         </HeroTitle>
         <HeroSubtitle as={Typing} text="Desenvolvedor Web Fullstack apaixonado em criar experiências incríveis!" typingSpeed={60} startDelay={500} />
         <HeroButtons>
-          <div style={{ margin: '100px', background: 'yellow', padding: '20px', zIndex: 9999 }}>
-            <a 
-              href="/portfolio/resume/resume_pt-br.pdf" 
-              download="curriculo-teste.pdf"
-              style={{ fontSize: '24px', color: 'blue' }}
-            >
-              TESTE 
-            </a>
-          </div>
           <HeroButton href="#projetos">Meus Projetos</HeroButton>
           <HeroButtonOutline href="#contato">Entre em Contato</HeroButtonOutline>
         </HeroButtons>
