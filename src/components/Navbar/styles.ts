@@ -101,7 +101,6 @@ export const NavLinks = styled.a`
     color: var(--text-secondary); 
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
-
   
   &::after {
     content: '';
@@ -291,33 +290,18 @@ export const MobileLink = styled.a`
   }
 `;
 
-export const MobileButtonContainer = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 3rem;
-  width: calc(100% - 4rem);
-  margin: 1rem 2rem;
-  border: 2px solid var(--accent-color);
-  border-radius: 8px;
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+export const MobileDownloadLink = styled.a`
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid var(--background-secondary);
+  transition: background-color 0.2s ease-in-out;
 
   &:hover {
-    background-color: var(--accent-color);
-    box-shadow: 0 4px 15px var(--accent-shadow);
-  }
-`;
-
-export const MobileButtonText = styled.span`
-  font-family: "Fira Code", monospace;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--accent-color);
-  transition: color 0.3s ease-in-out;
-
-  ${MobileButtonContainer}:hover & {
-    color: var(--text-inverted);
+    background-color: var(--background-secondary);
   }
 `;

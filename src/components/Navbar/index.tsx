@@ -11,10 +11,10 @@ import {
   MobileIcon,
   MobileMenu,
   MobileLink,
-  MobileButtonContainer,
   DownloadIcon,
   LanguageDropdown,
-  LanguageOption
+  LanguageOption,
+  MobileDownloadLink,
 } from "./styles";
 
 const navItems = [
@@ -44,7 +44,7 @@ const Navbar = () => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []); 
+  }, []);
 
   return (
     <NavbarContainer>
@@ -96,33 +96,20 @@ const Navbar = () => {
             {item.name}
           </MobileLink>
         ))}
-        <MobileButtonContainer onClick={toggleDropdown}>
-          <NavButtonText>
-            Baixar CV <DownloadIcon src={Download} alt="Download Icon" />
-          </NavButtonText>
-          <LanguageDropdown isOpen={isDropdownOpen}>
-            <LanguageOption
-              href="/portfolio/resume/resume_pt-br.pdf"
-              download="resume_pt-br.pdf"
-              onClick={(e) => {
-                e.stopPropagation(); 
-                setIsDropdownOpen(false);
-              }}
-            >
-              PT-BR
-            </LanguageOption>
-            <LanguageOption
-              href="/portfolio/resume/resume_en.pdf"
-              download="resume_en.pdf"
-              onClick={(e) => {
-                e.stopPropagation(); 
-                setIsDropdownOpen(false);
-              }}
-            >
-              EN
-            </LanguageOption>
-          </LanguageDropdown>
-        </MobileButtonContainer>
+        <MobileDownloadLink
+          href="/portfolio/resume/resume_pt-br.pdf"
+          download="resume_pt-br.pdf"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Baixar CV (PT-BR)
+        </MobileDownloadLink>
+        <MobileDownloadLink
+          href="/portfolio/resume/resume_en.pdf"
+          download="resume_en.pdf"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Baixar CV (EN)
+        </MobileDownloadLink>
       </MobileMenu>
     </NavbarContainer>
   );
