@@ -11,7 +11,7 @@
 </div>
 
 <img src="./src/assets/images/projects/portfolio.png" alt="Imagem do projeto">
-<h4 align="center"><a href="https://www.iuricode.com/">Clique para visitar o projeto</a></h4>
+<h4 align="center"><a href="https://jvmntr.github.io/portfolio/">Clique para visitar o projeto</a></h4>
 
 ## 📄 Seções
 
