@@ -20,6 +20,14 @@ export const projectsData: ProjectItem[] = [
     
   },
   {
+    title: 'Create-jvmntr-app',
+    description:
+      'Script de CLI interativo para automatizar a criação de projetos React, com estruturas e configurações otimizadas para produtividade.',
+    imageUrl: 'cja.jpg',
+    technologies: ['Shell Script'],
+    githubLink: 'https://github.com/Jvmntr/Create-jvmntr-app'
+  },
+  {
     title: 'Card pessoal',
     description:
       'Um pequeno projeto feito em ReactJS e styled-components com o foco de trazer uma apresentação profissional rápida, contendo um pouco das minhas tecnologias e especialidades.',
@@ -35,7 +43,7 @@ export const projectsData: ProjectItem[] = [
     imageUrl: 'tecladoJs.png',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     githubLink: 'https://github.com/Jvmntr/Teclado-JS'
-  },
+  }
 ];
 
 export {};
